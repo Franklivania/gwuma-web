@@ -1,0 +1,20 @@
+@theme inline {
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5rem;
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.75rem;
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.75rem;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 2rem;
+  --text-h2: 1.875rem;
+  --text-h2--line-height: 2.25rem;
+  --text-h1: 2.25rem;
+  --text-h1--line-height: 2.5rem;
+  --text-display: clamp(2.5rem, 5vw, 3.5rem);
+  --text-display--line-height: 1.1;
+}
