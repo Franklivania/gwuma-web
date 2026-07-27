@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import { site } from "@/lib/site";
+
+interface Props {
+  variant?: "hero" | "page";
+}
+
+const { variant = "hero" } = Astro.props;
+
+const shell =
+  variant === "hero"
+    ? "border-white/40 bg-white/90 text-foreground shadow-lg shadow-black/10 backdrop-blur-md"
+    : "border-border bg-white text-foreground shadow-md shadow-black/5";
+---
+
+<header
+  class="pointer-events-none absolute inset-x-0 top-0 z-30 flex justify-center px-4 pt-5 sm:pt-7"
+>
+  <nav
+    class:list={[
+      "pointer-events-auto flex w-full max-w-xl items-center justify-between gap-4 rounded-full border px-3 py-2 sm:px-4",
+      shell,
+    ]}
+    aria-label="Primary"
+  >
+    <a
+      href="/"
+      class="flex items-center gap-2.5 rounded-full pr-1 transition-opacity hover:opacity-80"
+    >
+      <Image
+        src="/web-app-manifest-192x192.png"
+        alt=""
+        width={36}
+        height={36}
+        class="size-9 rounded-full"
+      />
+      <span class="text-sm font-semibold tracking-tight sm:text-base"
+        >{site.name}</span
+      >
+    </a>
+
+    <a
+      href="/download"
+      class="inline-flex h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
+    >
+      Download
+    </a>
+  </nav>
+</header>

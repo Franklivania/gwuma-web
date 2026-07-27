@@ -1,0 +1,49 @@
+---
+
+---
+
+<div
+  class="cloud-band pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[58%] min-h-[20rem]"
+  aria-hidden="true"
+>
+  <svg
+    class="cloud-drift absolute inset-0 h-full w-full"
+    viewBox="0 0 1440 520"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="rgba(255,255,255,0.55)"
+      d="M0 220C120 160 240 140 360 170C480 200 560 280 700 260C840 240 920 140 1060 150C1200 160 1320 220 1440 190V520H0V220Z"
+    ></path>
+    <path
+      fill="rgba(255,255,255,0.78)"
+      d="M0 280C160 230 280 250 420 290C560 330 650 380 800 350C950 320 1080 250 1220 270C1320 285 1380 310 1440 300V520H0V280Z"
+    ></path>
+    <path
+      fill="#fffaf6"
+      d="M0 340C180 300 320 320 480 360C640 400 760 440 920 410C1080 380 1200 340 1340 360C1390 368 1420 380 1440 388V520H0V340Z"
+    ></path>
+  </svg>
+</div>
+
+<style>
+  @keyframes cloud-drift {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1.5%);
+    }
+  }
+
+  .cloud-drift {
+    animation: cloud-drift 18s ease-in-out infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cloud-drift {
+      animation: none;
+    }
+  }
+</style>

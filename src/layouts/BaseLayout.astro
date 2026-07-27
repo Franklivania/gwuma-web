@@ -1,6 +1,6 @@
 ---
 import "@/styles/global.css";
-import { site } from "@/lib/site";
+import { site, softwareApplicationLd } from "@/lib/site";
 
 interface Props {
   title?: string;
@@ -16,7 +16,7 @@ const {
   canonical = site.url,
 } = Astro.props;
 
-const jsonLd = {
+const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: site.name,
@@ -24,6 +24,8 @@ const jsonLd = {
   description: site.description,
   image: site.image,
 };
+
+const jsonLd = [websiteLd, softwareApplicationLd];
 ---
 
 <html lang="en">
@@ -36,7 +38,7 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#FF6B53" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
